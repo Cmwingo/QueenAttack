@@ -1,10 +1,11 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="Content/CSS/styles.css">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
   <script src="Content/js/scripts.js"></script>
 </head>
 <div class="container">
-  <form action="/can_attack">
+  <form action="/can_attack" id="can_attack">
     <div class="form-group">
       <label for="queen_x">Queen X Coordinate</label>
       <input id="queen_x" name="queen_x" class="form-control" type="number" required="required" min="1" max="8">
@@ -24,9 +25,13 @@
     {
       <h2>Your queen can attack there</h2>
     }
-    else
+    else if (@Model == false)
     {
       <h2>Your queen can not attack there</h2>
+    }
+    else
+    {
+      
     }
   </div>
 </div>
