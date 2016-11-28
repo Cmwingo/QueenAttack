@@ -1,4 +1,4 @@
-namespace QueenAttack
+namespace QueenAttack.Objects
 {
   public class Queen
   {

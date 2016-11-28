@@ -5,16 +5,24 @@
   <form action="/can_attack">
     <div class="form-group">
       <label for="queen_x">Queen X Coordinate</label>
-      <input id="queen_x" name="queen_x" class="form-control" type="text">
+      <input id="queen_x" name="queen_x" class="form-control" type="number" required="required" min="1" max="8">
       <label for="queen_y">Queen Y Coordinate</label>
-      <input id="queen_y" name="queen_y" class="form-control" type="text">
+      <input id="queen_y" name="queen_y" class="form-control" type="number" required="required" min="1" max="8">
     </div>
     <div class="form-group">
       <label for="attack_x">Attack Position X Coordinate</label>
-      <input id="attack_x" name="attack_x" class="form-control" type="text">
+      <input id="attack_x" name="attack_x" class="form-control" type="number" required="required" min="1" max="8">
       <label for="attack_y">Attack Position Y Coordinate</label>
-      <input id="attack_y" name="attack_y" class="form-control" type="text">
+      <input id="attack_y" name="attack_y" class="form-control" type="number" required="required" min="1" max="8">
     </div>
     <button type="submit">Attack?</button>
   </form>
+  @if (@Model == true)
+  {
+    <h2>Your queen can attack there</h2>
+  }
+  else
+  {
+    <h2>Your queen can not attack there</h2>
+  }
 </div>

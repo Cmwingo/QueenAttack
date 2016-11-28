@@ -1,4 +1,5 @@
 using Xunit;
+using QueenAttack.Objects;
 
 namespace QueenAttack
 {
