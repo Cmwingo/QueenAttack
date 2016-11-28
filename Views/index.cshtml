@@ -1,5 +1,7 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="Content/CSS/styles.css">
+  <script src="Content/js/scripts.js"></script>
 </head>
 <div class="container">
   <form action="/can_attack">
@@ -17,12 +19,14 @@
     </div>
     <button type="submit">Attack?</button>
   </form>
-  @if (@Model == true)
-  {
-    <h2>Your queen can attack there</h2>
-  }
-  else
-  {
-    <h2>Your queen can not attack there</h2>
-  }
+  <div id="result">
+    @if (@Model == true)
+    {
+      <h2>Your queen can attack there</h2>
+    }
+    else
+    {
+      <h2>Your queen can not attack there</h2>
+    }
+  </div>
 </div>
